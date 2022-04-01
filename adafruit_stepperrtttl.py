@@ -44,7 +44,7 @@ for octave in OCTAVES_LIST:
         last_note *= HALF_STEP_FACTOR
 gc.collect()
 
-#PIANO = {
+# PIANO = {
 #    "4c": 261.626,
 #    "4c#": 277.183,
 #    "4d": 293.665,
@@ -64,7 +64,7 @@ gc.collect()
 #    "5e": 659.255,
 #    "5f": 698.456,
 #    "5f#": 739.989,
-#    "5g": G5_NOTE, # 
+#    "5g": G5_NOTE, #
 #    "5g#": G5_NOTE * G_TO_GSHARP,
 #    "5a": G5_NOTE * G_TO_A,
 #    "5a#": G5_NOTE * G_TO_ASHARP,
@@ -83,7 +83,7 @@ gc.collect()
 #    "6b": 1975.53,
 #    "7c": 2093,
 #    "7c#": 2217.46,
-#}
+# }
 
 
 def _parse_note(note: str, duration: int = 2, octave: int = 6) -> Tuple[str, float]:
@@ -107,6 +107,7 @@ def _parse_note(note: str, duration: int = 2, octave: int = 6) -> Tuple[str, flo
         note_octave = note[-1]
     piano_note = note_octave + piano_note
     return piano_note, note_duration
+
 
 def _play_to_stepper(
     tune: str,
